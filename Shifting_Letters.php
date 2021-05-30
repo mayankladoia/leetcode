@@ -31,14 +31,14 @@ $shifts = [3,5,9];
 //$s = "z";
 //$shifts = [52];
 
-for($i=0;$i<count($shifts);$i++) {
-  $increment = $shifts[$i] % 26;
-  for($j=0;$j<=$i;$j++) {
-    $temp = ord($s[$j]) + $increment;
-    while($temp > 122) {
-      $temp = $temp - 122 + 96;
-    }
-    $s[$j] = chr($temp);
+$sum = 0;
+for($i=count($shifts)-1;$i>=0;$i--) {
+  $sum += $shifts[$i];
+  $increment = $sum % 26;
+  $temp = ord($s[$i]) + $increment;
+  while($temp > 122) {
+    $temp = $temp - 122 + 96;
   }
+  $s[$i] = chr($temp);
 }
 echo $s;
