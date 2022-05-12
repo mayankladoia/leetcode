@@ -1,3 +1,4 @@
 # leetcode
-Solution to code challenge questions from multiple different sources
-The top of each file consist of question and the bottom is solution to the problem.
+Solution to code challenge questions from multiple different sources.
+
+The top part consist of problem and the bottom part is solution to the problem.
